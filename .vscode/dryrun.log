@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/thangved/Workspaces/Cpp/theory-of-computation'
-make: Leaving directory '/home/thangved/Workspaces/Cpp/theory-of-computation'
- 
-make: *** No targets specified and no makefile found.  Stop.
-
