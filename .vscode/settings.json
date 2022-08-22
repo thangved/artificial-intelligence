@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.handlebars": "handlebars",
+        "array": "cpp",
+        "string_view": "cpp"
+    }
+}
