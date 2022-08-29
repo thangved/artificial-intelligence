@@ -154,7 +154,7 @@ void solution(Tree root)
     printSolution(*(Closed.end() - 1));
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     Tree root = createRoot();
     solution(root);
