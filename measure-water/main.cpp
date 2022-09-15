@@ -2,10 +2,10 @@
 #include <stack>
 #include <queue>
 
-#define MAX_TANK_CAPACITY_X 9
-#define MAX_TANK_CAPACITY_Y 4
+#define MAX_TANK_CAPACITY_X 98
+#define MAX_TANK_CAPACITY_Y 20
 #define EMPTY 0
-#define GOAL 6
+#define GOAL 14
 #define ACTION_COUNT 6
 
 using namespace std;
@@ -195,6 +195,7 @@ const State *breathFirstSearch(const State &initState)
                 State *pushState = (State *)malloc(sizeof(State));
                 pushState->x = nextState.x;
                 pushState->y = nextState.y;
+                pushState->action = nextState.action;
                 pushState->parent = currentState;
                 Open.push(pushState);
                 OPEN_STATES[nextState.x][nextState.y] = true;
@@ -253,7 +254,11 @@ void printStates(const State *state)
 int main()
 {
     const State firstState = createState(NULL);
-    const State *goalState = breathFirstSearch(firstState);
+    const State *goalState = depthFirstSearch(firstState);
+    if (goalState == NULL)
+    {
+        cout << "No Solution" << endl;
+    }
     printStates(goalState);
     return 0;
 }

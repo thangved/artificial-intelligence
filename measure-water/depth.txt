@@ -1,0 +1,129 @@
+Action:	Initial state
+State:	X: 0, Y: 0
+----------------------
+Action:	Full Y
+State:	X: 0, Y: 20
+----------------------
+Action:	Y to X
+State:	X: 20, Y: 0
+----------------------
+Action:	Full Y
+State:	X: 20, Y: 20
+----------------------
+Action:	Y to X
+State:	X: 40, Y: 0
+----------------------
+Action:	Full Y
+State:	X: 40, Y: 20
+----------------------
+Action:	Y to X
+State:	X: 60, Y: 0
+----------------------
+Action:	Full Y
+State:	X: 60, Y: 20
+----------------------
+Action:	Y to X
+State:	X: 80, Y: 0
+----------------------
+Action:	Full Y
+State:	X: 80, Y: 20
+----------------------
+Action:	Y to X
+State:	X: 98, Y: 2
+----------------------
+Action:	Empty Y
+State:	X: 98, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 78, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 78, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 58, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 58, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 38, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 38, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 18, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 18, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 0, Y: 18
+----------------------
+Action:	Full X
+State:	X: 98, Y: 18
+----------------------
+Action:	X to Y
+State:	X: 96, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 96, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 76, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 76, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 56, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 56, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 36, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 36, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 16, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 16, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 0, Y: 16
+----------------------
+Action:	Full X
+State:	X: 98, Y: 16
+----------------------
+Action:	X to Y
+State:	X: 94, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 94, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 74, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 74, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 54, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 54, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 34, Y: 20
+----------------------
+Action:	Empty Y
+State:	X: 34, Y: 0
+----------------------
+Action:	X to Y
+State:	X: 14, Y: 20
+----------------------
