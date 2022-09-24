@@ -125,14 +125,14 @@ Node *find_goal_dfs(Node *node)
     return NULL;
 }
 
-void print_states(Node *goal)
+void print_nodes(Node *goal)
 {
     if (goal == NULL)
     {
         return;
     }
 
-    print_states(goal->parent);
+    print_nodes(goal->parent);
     std::cout << "Lat ly thu " << goal->action << std::endl;
     for (int i = 0; i < COUNT_GLASS; i++)
     {
@@ -145,6 +145,6 @@ int main()
 {
     Node *node = create_node();
     Node *goal = find_goal_dfs(node);
-    print_states(goal);
+    print_nodes(goal);
     return 0;
 }
