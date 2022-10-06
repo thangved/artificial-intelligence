@@ -276,8 +276,7 @@ void print_nodes(Node *node)
 int main()
 {
     Node *node = new Node;
-    std::ifstream f;
-    f.open("./data.txt");
+    std::ifstream f("./data.txt");
 
     for (int i = 0; i < ROWS; i++)
     {
