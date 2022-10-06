@@ -33,6 +33,8 @@ typedef struct Node
 State get_goal_state()
 {
     State state;
+    state.empty_col = 0;
+    state.empty_row = 0;
 
     for (int i = 0; i < ROWS; i++)
     {
@@ -250,6 +252,20 @@ Node *find_goal(Node *root)
     return NULL;
 }
 
+void print_nodes(Node *node)
+{
+    if (!node)
+    {
+        return;
+    }
+
+    print_nodes(node->parent);
+
+    std::cout << "Action" << actions[node->action] << std::endl;
+
+    print_state(node->state);
+}
+
 int main()
 {
     Node *node = new Node;
@@ -271,6 +287,7 @@ int main()
     f.close();
 
     Node *goal = find_goal(node);
+    print_nodes(goal);
 
     return 0;
 }
