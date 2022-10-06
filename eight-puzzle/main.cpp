@@ -204,11 +204,16 @@ int heuristic(const State &state)
     {
         for (int j = 0; j < COLS; j++)
         {
-            count += goal.eightPuzzle[i][j] == state.eightPuzzle[i][j];
+            count += goal.eightPuzzle[i][j] != state.eightPuzzle[i][j];
         }
     }
 
     return count;
+}
+
+bool compare_heuristic(Node *a, Node *b)
+{
+    return a->heuristic < b->heuristic;
 }
 
 Node *find_goal(Node *root)
@@ -235,15 +240,17 @@ Node *find_goal(Node *root)
             State next_state;
             if (cal_operator(current_node->state, next_state, i))
             {
-                Node *next_node = new Node;
-                next_node->parent = current_node;
-                next_node->state = next_state;
-                next_node->action = i;
-                next_node->heuristic = heuristic(next_node->state);
 
                 if (!is_existing_state(closed_vec, next_state) && !is_existing_state(open_vec, next_state))
                 {
+                    Node *next_node = new Node;
+                    next_node->parent = current_node;
+                    next_node->state = next_state;
+                    next_node->action = i;
+                    next_node->heuristic = heuristic(next_state);
                     open_vec.push_back(next_node);
+
+                    std::sort(open_vec.begin(), open_vec.end(), compare_heuristic);
                 }
             }
         }
