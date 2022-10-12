@@ -268,7 +268,7 @@ void print_nodes(Node *node)
 
     print_nodes(node->parent);
 
-    std::cout << "Action" << actions[node->action] << std::endl;
+    std::cout << "Action: " << actions[node->action] << std::endl;
 
     print_state(node->state);
 }
