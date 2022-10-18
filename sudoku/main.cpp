@@ -18,12 +18,11 @@ typedef std::vector<Coord> ListCoord;
 typedef struct
 {
     bool data[NUM_COLS * NUM_ROWS][NUM_COLS * NUM_ROWS];
-    int n;
 } Constraints;
 
 Constraints create_constraints()
 {
-    Constraints Constraints = {{{}}, NUM_COLS * NUM_ROWS};
+    Constraints Constraints = {{{}}};
     return Constraints;
 }
 
@@ -134,7 +133,7 @@ bool is_filled_sudoku(const Sudoku &sudoku)
     return true;
 }
 
-void spread_constraints_from(const Coord position, Constraints &constraints, ListCoord &changeds)
+void spread_constraints_from(const Coord position, Constraints &constraints, ListCoord &changed_list)
 {
     int row = position.x;
     int col = position.y;
@@ -144,7 +143,7 @@ void spread_constraints_from(const Coord position, Constraints &constraints, Lis
         if (i != row)
         {
             if (add_constraint(constraints, position, {i, col}))
-                changeds.push_back({i, col});
+                changed_list.push_back({i, col});
         }
     }
 
@@ -153,7 +152,7 @@ void spread_constraints_from(const Coord position, Constraints &constraints, Lis
         if (i != col)
         {
             if (add_constraint(constraints, position, {row, i}))
-                changeds.push_back({row, i});
+                changed_list.push_back({row, i});
         }
     }
 
@@ -167,7 +166,7 @@ void spread_constraints_from(const Coord position, Constraints &constraints, Lis
             if (x + i != row || y + j != col)
             {
                 if (add_constraint(constraints, position, {x + i, y + j}))
-                    changeds.push_back({x + i, y + j});
+                    changed_list.push_back({x + i, y + j});
             }
         }
     }
