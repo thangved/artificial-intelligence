@@ -1,0 +1,13 @@
+;;!domain: hanoi
+;;!problem: problem_name
+
+0.00100: (move d1 d2 peg3)
+0.00200: (move d2 d3 peg2)
+0.00300: (move d1 peg3 d2)
+0.00400: (move d3 peg1 peg3)
+0.00500: (move d1 d2 peg1)
+0.00600: (move d2 peg2 d3)
+0.00700: (move d1 peg1 d2)
+
+; Makespan: 0.007
+; Metric: 0.007

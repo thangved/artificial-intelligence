@@ -154,14 +154,18 @@ void solution(Tree root)
 
     Open.push_back(root);
 
+    int count = 0;
+
     while (!Open.empty())
     {
         Tree front = Open.front();
         Open.erase(Open.begin());
         Closed.push_back(front);
+        count++;
 
         if (isGoal(front->state))
         {
+            std::cout << count << std::endl;
             break;
         }
 
